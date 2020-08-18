@@ -2,7 +2,6 @@ let db = [{username: 'arthurpfonseca@gmail.com', psswd: 'senha1234'}];
 
 function user_exists(username, psswd)
 {
-
     const filter = db.filter((user) => {
         let result = user.username == username;
         result = result && (user.psswd == psswd);
@@ -14,6 +13,8 @@ function user_exists(username, psswd)
 
 function create_element(tag_name, text, attributes)
 {
+    attributes = attributes || {};
+
     let el = document.createElement(tag_name);
     el.textContent = text;
     for(attr in attributes)
