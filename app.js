@@ -12,6 +12,13 @@ const router = new Router();
 app.use(addTrailingSlashes());
 app.use(mount('/', serve(path.join(__dirname, 'public'))));
 
+/*router.post('/login', (ctx) => {
+    console.log(ctx);
+    //ctx.body = '<h1>Ok this is epic</h1>';
+    router.redirect('/login', '/');
+    console.log(ctx);
+});*/
+
 router.post('/login', (ctx) => {
     console.log('Posting');
     console.log(ctx.request);

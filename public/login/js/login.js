@@ -1,11 +1,9 @@
-import { db as _db } from './db_manager.js';
-const db = _db;
-
+let db = [{username: 'arthurpfonseca@gmail.com', psswd: 'senha1234'}];
 //console.log("Arquivo login.js");
 
 function user_exists(username, psswd)
 {
-    console.log(db_manager);
+    //console.log('Usuario existe?');
 
     const filter = db.filter((user) => {
         let result = user.username == username;
@@ -13,14 +11,14 @@ function user_exists(username, psswd)
         return result;
     });
 
-    console.log(`expected: ${db[0].username}, ${db[0].psswd}`);
+    /*console.log(`expected: ${db[0].username}, ${db[0].psswd}`);
     console.log('user:');
     console.log(username);
 
     console.log('psswd:');
     console.log(psswd);
 
-    console.log(filter);
+    console.log(filter);*/
 
     return (filter.length == 1);
 }
@@ -47,8 +45,5 @@ function submit()
         suggest_sign_up();
     }
 }
-
-const _submit = submit;
-export {_submit as submit};
 
 //function submit(){console.log('submiting');const username = document.getElementById('username');const psswd = document.getElementById('psswd');if(!user_exists(username, psswd)){alert_invalid();suggest_sign_up();}}
