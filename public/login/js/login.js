@@ -12,14 +12,33 @@ function user_exists(username, psswd)
     return (filter.length == 1);
 }
 
+function create_element(tag_name, text, attributes)
+{
+    let el = document.createElement(tag_name);
+    el.textContent = text;
+    for(attr in attributes)
+    {
+        let value = attributes[attr];
+        el.setAttribute(attr, value);
+    }
+
+    return el;
+}
+
 function alert_invalid()
 {
-    console.log('Invalid email or password');
+    let msg = 'Invalid email or password';
+    let el = create_element('a', msg, {id: 'alert_invalid'});
+
+    document.querySelector('#login_form').appendChild(el);
 }
 
 function suggest_sign_up()
 {
-    console.log("Dont't have an account yet? Register!");
+    let msg = "Dont't have an account yet? Register!";
+    let el = create_element('span', msg, {href: 'test'});
+
+    document.querySelector('#login_form').appendChild(el);
 }
 
 function submit()
