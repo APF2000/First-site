@@ -1,4 +1,4 @@
-const delay = 500 * 1000;
+const delay = 60 * 1000;
 
 function abs_sin(value, phase){
     return Math.abs(Math.sin((value/ delay + phase) ));

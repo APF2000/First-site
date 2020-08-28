@@ -28,6 +28,7 @@ router.post('/login', (ctx) => {
 
 app.use(router.routes());
 
-app.listen(3000, () => {
-    console.log('App started');
+const port = 3000;
+app.listen(port, () => {
+    console.log(`App started at port ${port}`);
 });

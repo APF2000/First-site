@@ -18,14 +18,22 @@ body{
 
 .container{
     position: relative;
+    width: 80%;
+    padding-left: 10px;
 }
 
 button, input{
     width: 100%;
-    /*padding: 12px 20px;
-    margin: 8px 0;*
-    display: inline-block;
+    margin: 8px 0; /* Vertically space 8px */
+    padding: 12px 20px; /* Make blocks bigger */
+    /*border: 10px;
+    /*display: inline-block;
     /*border: 1px solid #ccc;
     border-radius: 4px;*
     box-sizing: border-box;*/
-  }
+}
+
+
+button{
+    border: 2em;
+}
